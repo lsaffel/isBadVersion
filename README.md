@@ -2,6 +2,8 @@ From Leetcode
 
 https://leetcode.com/problems/first-bad-version/description/
 
+Problem description:
+
 278. First Bad Version
 Easy
 7.9K
@@ -33,3 +35,7 @@ Output: 1
 Constraints:
 
 1 <= bad <= n <= 231 - 1
+
+---------------------------------
+
+My solution in Python uses binary search, searching the left half or right half, depending on whether the midpoint is a bad version or not.
