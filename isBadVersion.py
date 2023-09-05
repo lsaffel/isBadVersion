@@ -1,7 +1,7 @@
 # The isBadVersion API is already defined for you.
 # def isBadVersion(version: int) -> bool:
 
-# My solution works on the Leetcode page. Accepted.
+# My solution works on the Leetcode page. Accepted. Uses binary search.
 
 class Solution:
     def firstBadVersion(self, n: int) -> int:
@@ -10,9 +10,9 @@ class Solution:
 
         while left < right:
             mid = (left+right)//2   # integer division, rounds down
-            if isBadVersion(mid):
+            if isBadVersion(mid):        # if the midpoint one is bad, then search in the left half
                 right = mid - 1
-            else:
+            else:                        # the midpoint version is good, so search in the right half
                 left = mid + 1
 
         # left is now >= right... or only =
